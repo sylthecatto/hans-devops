@@ -73,7 +73,7 @@ pipeline {
 
                         sed -i "s|image: .*/${APP_NAME}:.*|image: ${IMAGE}|g" deployment.yaml
 
-                        git config user.email "sylthecatto@github.com"
+                        git config user.email "aaronhansluna.oliverio@gmail.com"
                         git config user.name  "sylthecatto"
                         git add deployment.yaml
                         git commit -m "ci: ${CONFIG_BRANCH} image -> ${VERSION}" || echo "no change"
