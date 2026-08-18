@@ -13,8 +13,7 @@ RUN pip install --no-cache-dir -r exam-source-requirements.txt
 # Copy source code
 COPY exam-source-app.py .
 
-# Copy default config (the ConfigMap mount overrides this in the cluster,
-# this is just so the app has something to read if it doesn't)
+# Copy default config
 COPY exam-source-config.json /app/config/config.json
 
 # Jenkins passes the real version in at build time
